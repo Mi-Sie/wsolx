@@ -7,10 +7,20 @@ dataUrl = 'https://www.olx.pl/motoryzacja/samochody/subaru/forester/?search[filt
 
 ## get the link
 
-urlContent = get(dataUrl)
-soup = BeautifulSoup.get()
-print(urlContent.content)
+urlContent = get(dataUrl).text
+##text
+
+
+print(type(urlContent))
+
+
+print(urlContent)
+
+
+
 
 ## get the ad list
+##<td class="offer  ">
+soup = bs.find_all(urlContent)
 ## get the link content
 ## store link content
